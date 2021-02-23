@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 
-public class PurchaseItem {
+public class AfishaItem {
     private int id;
     private int productId;
     private String productName;

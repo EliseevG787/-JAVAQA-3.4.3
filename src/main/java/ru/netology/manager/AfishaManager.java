@@ -1,23 +1,23 @@
 package ru.netology.manager;
 
-import ru.netology.domain.PurchaseItem;
+import ru.netology.domain.AfishaItem;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class CartManager {
-    private PurchaseItem[] items = new PurchaseItem[0];
+public class AfishaManager {
+    private AfishaItem[] items = new AfishaItem[0];
     private int number = 10;
 
-    public CartManager(int number) {
+    public AfishaManager(int number) {
         if (number >= 0) {
             this.number = number;
         }
     }
 
-    public void add(PurchaseItem item) {
+    public void add(AfishaItem item) {
         // создаём новый массив размером на единицу больше
         int length = items.length + 1;
-        PurchaseItem[] tmp = new PurchaseItem[length];
+        AfishaItem[] tmp = new AfishaItem[length];
         // itar + tab
         // копируем поэлементно
         // for (int i = 0; i < items.length; i++) {
@@ -30,14 +30,14 @@ public class CartManager {
         items = tmp;
     }
 
-    public PurchaseItem[] getLatest() {
+    public AfishaItem[] getLatest() {
         int count = 0;
         if (number < items.length) {
             count = number;
         } else {
             count = items.length;
         }
-        PurchaseItem[] result = new PurchaseItem[count];
+        AfishaItem[] result = new AfishaItem[count];
         // перебираем массив в прямом порядке
         // но кладём в результаты в обратном
         for (int i = 0; i < result.length; i++) {
